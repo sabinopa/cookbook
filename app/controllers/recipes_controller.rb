@@ -3,6 +3,9 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    if @recipe.user.present?
+      @all_list = MyList.all
+    end
   end
 
   def new

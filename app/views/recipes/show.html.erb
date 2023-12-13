@@ -11,3 +11,7 @@
     <p><%= @recipe.instructions%></p>
   </div>
 </div>
+
+<% if @current_user == @recipe.user_id %>
+  <%= button_to 'Adicionar em Favoritos' %>
+<% end %>
