@@ -87,7 +87,7 @@ feature 'Recipe API' do
                       ingredients: 'hamburguer, pão de hamburguer, queijo',
                       instructions: 'Frite o hamburguer, coloque no pão, coma')
 
-      get 'api/v1/recipes', params: { user_id.email: 'user@email.com' }
+      get 'api/v1/recipes'
       
       expect(response.status).to eq 200
       json_response = JSON.parse(response.body)
